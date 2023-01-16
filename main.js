@@ -270,7 +270,7 @@ function cleanBoard() {
 
             cell.innerText = "";
             sudokuGrid[row][col] = ".";
-            cell.classList.remove("input-cell");
+            cell.classList.remove("input-cell", "bg-orange-300");
         }
     }
 }
@@ -292,7 +292,7 @@ function setPresetExample() {
             if (preset[row][col] != ".") {
                 cell.innerText = preset[row][col];
                 sudokuGrid[row][col] = preset[row][col];
-                cell.classList.add("input-cell");
+                cell.classList.add("input-cell", "bg-orange-300");
             }
         }
     }
