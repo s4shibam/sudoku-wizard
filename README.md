@@ -2,11 +2,11 @@
 
 **What is Sudoku game?**
 
-Sudoku is a logic-based, combinatorial number-placement puzzle. In classic Sudoku, the objective is to fill a 9 × 9 grid with digits so that each column, each row, and each of the nine 3 × 3 sub-grids that compose the grid contain all of the digits from 1 to 9.
+`Sudoku` is a logic-based, combinatorial number-placement puzzle. In classic Sudoku, the objective is to fill a `9 × 9` grid with digits so that each column, each row, and each of the nine `3 × 3` sub-grids that compose the grid contain all of the digits from 1 to 9.
 
 **Details**
 
-Sudoku Solver is an algorithmic project based on Backtracking Algorithm. This projects shows a visual representation of the working of backtracking algorithm which is used to solve a Sudoku Puzzle.
+Sudoku Solver is an algorithmic project based on `Backtracking Algorithm`. This projects shows a visual representation of the working of backtracking algorithm which is used to solve a Sudoku Puzzle.
 
 **Tech Stack**
 
@@ -14,7 +14,7 @@ Sudoku Solver is an algorithmic project based on Backtracking Algorithm. This pr
 
 **Live Link**
 
-[Sudoku Solver](https://s4shibam-sudoku-solver.netlify.app)
+-   [Sudoku Solver](https://s4shibam-sudoku-solver.netlify.app)
 
 **Reference Images / Screenshots**
 
