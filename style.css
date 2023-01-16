@@ -15,7 +15,7 @@
         @apply bg-transparent;
     }
     .cell {
-        @apply h-[calc(100%_/_9)] w-[calc(100%_/_9)] text-xl sm:text-3xl font-bold flex justify-center items-center text-gray-900 focus:outline-none bg-white border border-gray-400 hover:bg-gray-100 hover:text-blue-700 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 cursor-pointer;
+        @apply h-[calc(100%_/_9)] w-[calc(100%_/_9)] text-xl sm:text-3xl font-bold flex justify-center items-center text-gray-900 focus:outline-none bg-white border border-gray-400 hover:bg-gray-100 hover:text-blue-700 cursor-pointer;
     }
 
     .input-cell {
@@ -23,7 +23,7 @@
     }
 
     .number-button {
-        @apply py-3 px-5 text-xl sm:text-3xl font-bold text-blue-600 focus:outline-none bg-white rounded-lg text-center border border-gray-200 hover:bg-amber-300 hover:text-gray-900 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 transition-all duration-500 ease-in-out hover:scale-110 cursor-pointer  disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed;
+        @apply px-3 py-1 sm:px-5 sm:py-3 text-xl sm:text-3xl font-bold text-blue-600 focus:outline-none bg-white rounded-lg text-center border border-gray-200 hover:bg-amber-300 hover:text-gray-900 transition-all duration-500 ease-in-out hover:scale-110 cursor-pointer  disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed;
     }
 
     .number-button-selected {
@@ -34,6 +34,6 @@
     }
 
     .tooltip-element {
-        @apply absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 dark:bg-gray-700 transition-opacity delay-500;
+        @apply absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity delay-500;
     }
 }
