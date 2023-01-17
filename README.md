@@ -28,7 +28,7 @@ Sudoku Solver is an algorithmic project based on `Backtracking Algorithm`. This 
 
 -   Sudoku Puzzle During Solving
 
-<a href="https://drive.google.com/uc?export=view&id=1M702KssdHd6h39Vuc0XSV2a--L0sxlEg"><img src="https://drive.google.com/uc?export=view&id=1M702KssdHd6h39Vuc0XSV2a--L0sxlEg" alt="Image 3" style="max-width: 100%; height: auto" title="Click for the larger version." /></a>
+<img src="./media/Sudoku Solver.gif" alt="GIF" style="max-width: 100%; height: auto"/>
 
 -   Mobile View
 
