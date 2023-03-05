@@ -10,26 +10,26 @@ Sudoku Solver is an algorithmic project based on `Backtracking Algorithm`. This 
 
 **Tech Stack**
 
--   HTML, Tailwind CSS, Vanilla Javascript, ViteJS
+- HTML, Tailwind CSS, Vanilla Javascript, ViteJS
 
 **Live Link**
 
--   [Sudoku Solver](https://s4shibam-sudoku-solver.netlify.app)
+- [Sudoku Solver](https://s4shibam-sudoku-solver.netlify.app)
 
 **Reference Images / Screenshots**
 
--   Landing Page
+- Landing Page
 
-![Image 1](https://drive.google.com/uc?export=view&id=1Hko2KGwe-rHk5ab378gxT1h4X5TDcAGp)
+<img src="./media/Landing.png" alt="Landing Page" style="width: 75%; height: auto"/>
 
--   Preset Sudoku Puzzle
+- Preset Sudoku Puzzle
 
-![Image 2](https://drive.google.com/uc?export=view&id=1oXgtKUhhjsmJEQwz025UrqTKuXQMr29Q)
+<img src="./media/Preset.png" alt="Preset Sudoku Puzzle" style="width: 75%; height: auto"/>
 
--   Sudoku Puzzle During Solving
+- Sudoku Puzzle During Solving
 
-<img src="./media/Sudoku Solver.gif" alt="GIF" style="max-width: 100%; height: auto"/>
+<img src="./media/Video.gif" alt="Sudoku Puzzle During Solving" style="width: 75%; height: auto"/>
 
--   Mobile View
+- Mobile View
 
-![Image 4](https://drive.google.com/uc?export=view&id=1GN9DboVUIFf6QOpE82j8Vg-fij9GImI8)
+<img src="./media/Mobile.png" alt="Mobile View" style="width: auto; height: 800px"/>
