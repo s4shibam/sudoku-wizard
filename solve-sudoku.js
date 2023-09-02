@@ -21,7 +21,6 @@ async function isValid(board, row, col, char) {
 
 // Algorithm to solve the board
 async function solveSudoku(board, delay) {
-  console.log(delay);
   for (let row = 0; row < 9; row++) {
     for (let col = 0; col < 9; col++) {
       // Cell is blank
