@@ -5,15 +5,15 @@
 @tailwind utilities;
 
 @layer components {
-    /* width */
+
     ::-webkit-scrollbar {
         @apply w-0 border-0;
     }
 
-    /* Handle */
     ::-webkit-scrollbar-thumb {
         @apply bg-transparent;
     }
+
     .cell {
         @apply h-[calc(100%_/_9)] w-[calc(100%_/_9)] text-xl sm:text-3xl font-bold flex justify-center items-center text-gray-900 focus:outline-none bg-white border border-gray-400 hover:bg-gray-100 hover:text-blue-700 cursor-pointer;
     }
@@ -29,6 +29,7 @@
     .number-button-selected {
         @apply text-black bg-green-300 hover:bg-green-300 scale-110;
     }
+
     .action-button {
         @apply py-3 px-6 m-2 flex justify-center items-center text-lg sm:text-2xl font-medium rounded-3xl text-gray-900 bg-gradient-to-r from-amber-300 to-orange-300  hover:transition-all duration-700 ease-in-out hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed;
     }
