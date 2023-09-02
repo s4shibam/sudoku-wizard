@@ -8,9 +8,10 @@ import { isValidSudoku } from './valid-sudoku.js';
 
 // Declare variables
 let numberSelected = null,
+  body = null,
   openModal = null,
   isRunning = false,
-  closeModal = null,
+  modalBG = null,
   logoButton = null,
   startButton = null,
   resetButton = null,
@@ -305,38 +306,42 @@ function reloadSite() {
 
 // Build the Sudoku Game
 function buildSudokuGame() {
+  sudokuBoard = document.querySelector('.sudoku-board');
+  numberPlate = document.querySelector('.number-plate');
   buildSudokuBoard();
   buildNumberPlate();
 }
 
+buildSudokuGame();
+
 // Program starts here - After page is fully loaded
 window.addEventListener('load', () => {
-  sudokuBoard = document.querySelector('.sudoku-board');
-  numberPlate = document.querySelector('.number-plate');
-  sudokuStatus = document.querySelector('.sudoku-status');
-  slowVisualization = document.querySelector('#slow-visualization');
+  body = document.querySelector('#body');
   logoButton = document.querySelector('#logo');
   startButton = document.querySelector('#start');
   resetButton = document.querySelector('#reset');
   randomButton = document.querySelector('#random');
+  modalBG = document.querySelector('#modal-bg');
   openModal = document.querySelector('#open-modal');
-  closeModal = document.querySelector('#modal-bg');
-
-  // On window load, build the Sudoku Game
-  buildSudokuGame();
+  sudokuStatus = document.querySelector('#sudoku-status');
+  slowVisualization = document.querySelector('#slow-visualization');
 
   if (logoButton) {
     logoButton.addEventListener('click', reloadSite);
   }
+
   if (startButton) {
     startButton.addEventListener('click', start);
   }
+
   if (resetButton) {
     resetButton.addEventListener('click', reloadSite);
   }
+
   if (randomButton) {
     randomButton.addEventListener('click', setPresetExample);
   }
+
   if (slowVisualization) {
     slowVisualization.addEventListener('change', function () {
       isSlowVisualizationEnabled = this.checked;
@@ -345,14 +350,19 @@ window.addEventListener('load', () => {
 
   if (openModal) {
     openModal.addEventListener('click', function () {
-      document.getElementById('modal-bg').classList.remove('hidden');
+      modalBG.classList.remove('hidden');
     });
   }
 
-  if (closeModal) {
-    closeModal.addEventListener('click', function () {
-      document.getElementById('modal-bg').classList.add('hidden');
+  if (modalBG) {
+    modalBG.addEventListener('click', function () {
+      modalBG.classList.add('hidden');
     });
+  }
+
+  if (body) {
+    body.classList.remove('hidden');
+    body.classList.add('grid');
   }
 });
 
