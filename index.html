@@ -26,7 +26,8 @@
   </head>
   <!-- Body Starts -->
   <body
-    class="m-0 p-0 min-h-screen bg-gray-100 text-black font-poppins grid grid-rows-[50px_1fr_50px] sm:grid-rows-[70px_1fr_70px] place-items-center"
+    id="body"
+    class="m-0 p-0 min-h-screen hidden bg-gray-100 text-black font-poppins grid-rows-[50px_1fr_50px] sm:grid-rows-[70px_1fr_70px] place-items-center animate-reveal"
   >
     <!-- Navigation Bar Starts -->
     <nav
@@ -109,7 +110,10 @@
       <!-- Sudoku Controls Starts -->
       <div class="control-panel flex flex-col justify-center items-center">
         <!-- Sudoku Status Starts -->
-        <div class="sudoku-status text-2xl sm:text-4xl font-bold">
+        <div
+          id="sudoku-status"
+          class="sudoku-status text-2xl sm:text-4xl font-bold"
+        >
           <!-- Sudoku Status Displayed Here -->
         </div>
         <!-- Sudoku Status Ends -->
