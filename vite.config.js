@@ -1,7 +1,10 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite';
 
 export default defineConfig({
   build: {
-    minify: false,
+    minify: false
   },
+  server: {
+    host: true
+  }
 });
