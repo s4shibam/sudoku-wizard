@@ -132,6 +132,7 @@ let presets = [
 
 function getPreset(min = 0, max = 9) {
   let preset_no = Math.floor(Math.random() * (max - min + 1)) + min;
+  console.log(preset_no);
   return presets[preset_no];
 }
 
