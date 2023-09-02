@@ -1,217 +1,263 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <meta
-            name="description"
-            content="Sudoku Solver is a web application to solve a Sudoku Puzzle along with the visual representation that how these puzzles are solved."
-        />
-        <meta
-            name="keywords"
-            content="sudoku game, sudoku solver, solve sudoku, sudoku puzzle"
-        />
-        <meta
-            property="og:description"
-            content="Get your Sudoku Puzzle solved with zero effort!"
-        />
-        <meta
-            property="og:image"
-            content="https://s4shibam-sudoku-solver.netlify.app/logo.ico"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sudoku Solver</title>
-        <link rel="icon" type="image/x-icon" href="./logo.ico" />
-    </head>
-    <!-- Body Starts -->
-    <body class="m-0 p-0 bg-gray-100 text-black font-poppins">
-        <!-- Navigation Bar Starts -->
-        <nav
-            class="px-5 sm:px-10 py-3 flex items-center justify-between absolute w-full bg-gray-500"
-        >
-            <!-- Logo Starts -->
-            <img
-                src="./logo.ico"
-                alt="Logo Image"
-                class="w-8 sm:w-14 cursor-pointer"
-                id="logo"
-            />
-            <!-- Logo Ends -->
+    <meta
+      name="description"
+      content="Sudoku Solver is a web application to solve a Sudoku Puzzle along with the visual representation that how these puzzles are solved."
+    />
+    <meta
+      name="keywords"
+      content="sudoku game, sudoku solver, solve sudoku, sudoku puzzle"
+    />
+    <meta
+      property="og:description"
+      content="Get your Sudoku Puzzle solved with zero effort!"
+    />
+    <meta
+      property="og:image"
+      content="https://sudoku-wizard.shibamsaha.dev/logo.ico"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku Wizard</title>
+    <link rel="icon" type="image/x-icon" href="./logo.ico" />
+  </head>
+  <!-- Body Starts -->
+  <body
+    class="m-0 p-0 min-h-screen bg-gray-100 text-black font-poppins grid grid-rows-[50px_1fr_50px] sm:grid-rows-[70px_1fr_70px] place-items-center"
+  >
+    <!-- Navigation Bar Starts -->
+    <nav
+      class="px-3 sm:px-10 h-full flex items-center justify-between w-full bg-black/10"
+    >
+      <!-- Logo Starts -->
+      <img
+        src="./logo.ico"
+        alt="Logo Image"
+        class="w-8 sm:w-14 cursor-pointer drop-shadow-md"
+        id="logo"
+      />
+      <!-- Logo Ends -->
 
-            <!-- Site Name Starts -->
-            <p
-                class="text-2xl sm:text-4xl font-extrabold tracking-wider select-none"
-            >
-                SUDOKU SOLVER
-            </p>
-            <!-- Site Name Ends -->
+      <!-- Site Name Starts -->
+      <p class="text-2xl sm:text-4xl font-extrabold tracking-wider select-none">
+        <span class="text-[#75327C]"> SUDOKU </span>
+        <span class="text-[#7373E2]"> WIZARD </span>
+      </p>
+      <!-- Site Name Ends -->
 
-            <!-- What is Sudoku? Starts -->
-            <a
-                href="https://sudoku.com/how-to-play/sudoku-rules-for-complete-beginners/"
-                target="_blank"
-            >
-                <svg
-                    data-tooltip-target="tooltip-about"
-                    data-tooltip-trigger="hover"
-                    data-tooltip-placement="bottom"
-                    class="w-8 sm:w-14 fill-amber-400 hover:fill-amber-500 cursor-pointer"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                >
-                    <path
-                        d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 464c-114.7 0-208-93.31-208-208S141.3 48 256 48s208 93.31 208 208S370.7 464 256 464zM256 336c-18 0-32 14-32 32s13.1 32 32 32c17.1 0 32-14 32-32S273.1 336 256 336zM289.1 128h-51.1C199 128 168 159 168 198c0 13 11 24 24 24s24-11 24-24C216 186 225.1 176 237.1 176h51.1C301.1 176 312 186 312 198c0 8-4 14.1-11 18.1L244 251C236 256 232 264 232 272V288c0 13 11 24 24 24S280 301 280 288V286l45.1-28c21-13 34-36 34-60C360 159 329 128 289.1 128z"
-                    />
-                </svg>
-            </a>
-            <div
-                id="tooltip-about"
-                role="tooltip"
-                class="tooltip absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-black bg-amber-400 rounded-lg shadow-sm opacity-0 transition-opacity delay-500"
-            >
-                What is Sudoku Game?
-                <div class="tooltip-arrow" data-popper-arrow></div>
-            </div>
-            <!-- What is Sudoku? Ends -->
-        </nav>
-        <!-- Navigation Bar Ends -->
+      <!-- What is Sudoku? Starts -->
+      <button id="open-modal">
+        <img
+          src="./question.png"
+          alt="How To play?"
+          id="how-to-play"
+          data-tooltip-target="tooltip-how-to-play"
+          data-tooltip-trigger="hover"
+          data-tooltip-placement="bottom"
+          class="w-8 sm:w-14 cursor-pointer drop-shadow-md"
+        />
+      </button>
+      <div
+        id="tooltip-how-to-play"
+        role="tooltip"
+        class="tooltip absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-black bg-amber-400 rounded-lg shadow-sm opacity-0 transition-opacity delay-500"
+      >
+        How to play?
+      </div>
+      <!-- What is Sudoku? Ends -->
+    </nav>
+    <!-- Navigation Bar Ends -->
 
-        <!-- Container Starts -->
+    <!-- Container Starts -->
+    <div
+      class="container max-w-full flex justify-center items-center gap-3 flex-col lg:flex-row"
+    >
+      <!-- Left Container Parts Starts -->
+      <div class="flex flex-col gap-3 justify-center items-center">
+        <!-- Sudoku Board/Grid Starts -->
         <div
-            class="container sm:pt-16 lg:mb-24 min-h-screen max-w-full flex justify-center items-center flex-col lg:flex-row"
+          class="sudoku-board mt-12 mx-8 h-[300px] sm:h-[500px] w-[300px] sm:w-[500px] flex flex-wrap"
         >
-            <!-- Sudoku Board/Grid Starts -->
-            <div
-                class="sudoku-board mt-12 m-8 h-[300px] sm:h-[500px] w-[300px] sm:w-[500px] flex flex-wrap"
-            >
-                <!-- Sudoku Cells (Injected by JavaScript)-->
-            </div>
-            <!-- Sudoku Board/Grid Ends -->
-
-            <!-- Sudoku Controls Starts -->
-            <div
-                class="control-panel flex flex-col justify-center items-center"
-            >
-                <!-- Sudoku Status Starts -->
-                <div class="sudoku-status text-2xl sm:text-4xl font-bold">
-                    <!-- Sudoku Status Displayed Here -->
-                </div>
-                <!-- Sudoku Status Ends -->
-
-                <!-- Sudoku Input Option Starts -->
-                <div
-                    class="number-plate mx-8 my-4 grid grid-cols-5 content-center items-center gap-2"
-                >
-                    <!-- Number Buttons (Injected by JavaScript)-->
-                </div>
-                <!-- Sudoku Input Option Ends -->
-
-                <!-- Sudoku Action Option Starts -->
-                <div
-                    class="action-option mt-2 grid grid-cols-3 content-center items-center gap-1"
-                >
-                    <button
-                        data-tooltip-target="tooltip-start"
-                        data-tooltip-trigger="hover"
-                        data-tooltip-placement="bottom"
-                        type="button"
-                        class="action-button"
-                        id="start"
-                    >
-                        <svg
-                            class="w-4 sm:w-6"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 384 512"
-                        >
-                            <path
-                                d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"
-                            />
-                        </svg>
-                    </button>
-                    <div
-                        id="tooltip-start"
-                        role="tooltip"
-                        class="tooltip absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-black bg-amber-400 rounded-lg shadow-sm opacity-0 transition-opacity delay-700"
-                    >
-                        Solve Puzzle!
-                        <div class="tooltip-arrow" data-popper-arrow></div>
-                    </div>
-                    <button
-                        data-tooltip-target="tooltip-reset"
-                        data-tooltip-trigger="hover"
-                        data-tooltip-placement="bottom"
-                        type="button"
-                        class="action-button"
-                        id="reset"
-                    >
-                        <svg
-                            class="w-6 sm:w-8"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512"
-                        >
-                            <path
-                                d="M463.5 224H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1c-87.5 87.5-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5z"
-                            />
-                        </svg>
-                    </button>
-                    <div
-                        id="tooltip-reset"
-                        role="tooltip"
-                        class="tooltip absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-black bg-amber-400 rounded-lg shadow-sm opacity-0 transition-opacity delay-700"
-                    >
-                        Reset Puzzle!
-                        <div class="tooltip-arrow" data-popper-arrow></div>
-                    </div>
-                    <button
-                        data-tooltip-target="tooltip-random"
-                        data-tooltip-trigger="hover"
-                        data-tooltip-placement="bottom"
-                        type="button"
-                        class="action-button"
-                        id="random"
-                    >
-                        <svg
-                            class="w-6 sm:w-8"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512"
-                        >
-                            <path
-                                d="M403.8 34.4c12-5 25.7-2.2 34.9 6.9l64 64c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-64 64c-9.2 9.2-22.9 11.9-34.9 6.9s-19.8-16.6-19.8-29.6V160H352c-10.1 0-19.6 4.7-25.6 12.8L284 229.3 244 176l31.2-41.6C293.3 110.2 321.8 96 352 96h32V64c0-12.9 7.8-24.6 19.8-29.6zM164 282.7L204 336l-31.2 41.6C154.7 401.8 126.2 416 96 416H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H96c10.1 0 19.6-4.7 25.6-12.8L164 282.7zm274.6 188c-9.2 9.2-22.9 11.9-34.9 6.9s-19.8-16.6-19.8-29.6V416H352c-30.2 0-58.7-14.2-76.8-38.4L121.6 172.8c-6-8.1-15.5-12.8-25.6-12.8H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H96c30.2 0 58.7 14.2 76.8 38.4L326.4 339.2c6 8.1 15.5 12.8 25.6 12.8h32V320c0-12.9 7.8-24.6 19.8-29.6s25.7-2.2 34.9 6.9l64 64c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-64 64z"
-                            />
-                        </svg>
-                    </button>
-                    <div
-                        id="tooltip-random"
-                        role="tooltip"
-                        class="tooltip absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-black bg-amber-400 rounded-lg shadow-sm opacity-0 transition-opacity delay-700"
-                    >
-                        Random Puzzle!
-                        <div class="tooltip-arrow" data-popper-arrow></div>
-                    </div>
-                </div>
-                <!-- Sudoku Action Option Ends -->
-            </div>
-            <!-- Sudoku Controls Ends -->
+          <!-- Sudoku Cells (Injected by JavaScript)-->
         </div>
-        <!-- Container Ends -->
+        <!-- Sudoku Board/Grid Ends -->
 
-        <!-- Footer Starts -->
-        <footer
-            class="mt-8 lg:-mt-32 pb-2 flex items-center justify-center text-sm xl:text-base text-black"
+        <!-- Visualization Toggle Button Starts -->
+
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input
+            type="checkbox"
+            id="slow-visualization"
+            class="sr-only peer"
+            checked
+          />
+          <div
+            class="w-11 h-6 bg-gray-400 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-400 peer-disabled:opacity-50 peer-disabled:cursor-not-allowed"
+          ></div>
+          <span class="ml-3 text-base font-medium text-gray-900"
+            >Slow Visualization</span
+          >
+        </label>
+
+        <!-- Visualization Toggle Button Ends -->
+      </div>
+      <!-- Left Container Parts Ends -->
+
+      <!-- Sudoku Controls Starts -->
+      <div class="control-panel flex flex-col justify-center items-center">
+        <!-- Sudoku Status Starts -->
+        <div class="sudoku-status text-2xl sm:text-4xl font-bold">
+          <!-- Sudoku Status Displayed Here -->
+        </div>
+        <!-- Sudoku Status Ends -->
+
+        <!-- Sudoku Input Option Starts -->
+        <div
+          class="number-plate mx-8 my-4 grid grid-cols-5 content-center items-center gap-2"
         >
-            For Code Visit -&nbsp;
-            <a
-                href="https://github.com/s4shibam/Sudoku-Solver-Web-App"
-                class="hover:underline"
-                target="_blank"
-                >GitHub</a
-            >
-        </footer>
-        <!-- Footer Ends -->
+          <!-- Number Buttons (Injected by JavaScript)-->
+        </div>
+        <!-- Sudoku Input Option Ends -->
 
-        <script type="module" src="/main.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
-    </body>
-    <!-- Body Ends -->
+        <!-- Sudoku Action Option Starts -->
+        <div
+          class="action-option mt-2 grid grid-cols-3 content-center items-center gap-1"
+        >
+          <button
+            data-tooltip-target="tooltip-start"
+            data-tooltip-trigger="hover"
+            data-tooltip-placement="bottom"
+            type="button"
+            class="action-button"
+            id="start"
+          >
+            <svg
+              class="w-4 sm:w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 384 512"
+            >
+              <path
+                d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"
+              />
+            </svg>
+          </button>
+          <div
+            id="tooltip-start"
+            role="tooltip"
+            class="tooltip absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-black bg-amber-400 rounded-lg shadow-sm opacity-0 transition-opacity delay-700"
+          >
+            Solve Puzzle!
+            <div class="tooltip-arrow" data-popper-arrow></div>
+          </div>
+          <button
+            data-tooltip-target="tooltip-reset"
+            data-tooltip-trigger="hover"
+            data-tooltip-placement="bottom"
+            type="button"
+            class="action-button"
+            id="reset"
+          >
+            <svg
+              class="w-6 sm:w-8"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M463.5 224H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1c-87.5 87.5-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5z"
+              />
+            </svg>
+          </button>
+          <div
+            id="tooltip-reset"
+            role="tooltip"
+            class="tooltip absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-black bg-amber-400 rounded-lg shadow-sm opacity-0 transition-opacity delay-700"
+          >
+            Reset Puzzle!
+            <div class="tooltip-arrow" data-popper-arrow></div>
+          </div>
+          <button
+            data-tooltip-target="tooltip-random"
+            data-tooltip-trigger="hover"
+            data-tooltip-placement="bottom"
+            type="button"
+            class="action-button"
+            id="random"
+          >
+            <svg
+              class="w-6 sm:w-8"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M403.8 34.4c12-5 25.7-2.2 34.9 6.9l64 64c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-64 64c-9.2 9.2-22.9 11.9-34.9 6.9s-19.8-16.6-19.8-29.6V160H352c-10.1 0-19.6 4.7-25.6 12.8L284 229.3 244 176l31.2-41.6C293.3 110.2 321.8 96 352 96h32V64c0-12.9 7.8-24.6 19.8-29.6zM164 282.7L204 336l-31.2 41.6C154.7 401.8 126.2 416 96 416H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H96c10.1 0 19.6-4.7 25.6-12.8L164 282.7zm274.6 188c-9.2 9.2-22.9 11.9-34.9 6.9s-19.8-16.6-19.8-29.6V416H352c-30.2 0-58.7-14.2-76.8-38.4L121.6 172.8c-6-8.1-15.5-12.8-25.6-12.8H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H96c30.2 0 58.7 14.2 76.8 38.4L326.4 339.2c6 8.1 15.5 12.8 25.6 12.8h32V320c0-12.9 7.8-24.6 19.8-29.6s25.7-2.2 34.9 6.9l64 64c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-64 64z"
+              />
+            </svg>
+          </button>
+          <div
+            id="tooltip-random"
+            role="tooltip"
+            class="tooltip absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-black bg-amber-400 rounded-lg shadow-sm opacity-0 transition-opacity delay-700"
+          >
+            Random Puzzle!
+            <div class="tooltip-arrow" data-popper-arrow></div>
+          </div>
+        </div>
+        <!-- Sudoku Action Option Ends -->
+      </div>
+      <!-- Sudoku Controls Ends -->
+    </div>
+    <!-- Container Ends -->
+
+    <!-- Footer Starts -->
+    <footer
+      class="flex flex-col mt-auto mb-2 items-center justify-center text-xs xl:text-sm text-black"
+    >
+      <div>
+        For Code Visit -
+        <a
+          href="https://github.com/s4shibam/sudoku-wizard"
+          class="hover:underline"
+          target="_blank"
+          >GitHub</a
+        >
+      </div>
+      <div>
+        Developed with ❤️ by
+        <a
+          href="https://shibamsaha.dev/"
+          class="hover:underline"
+          target="_blank"
+          >Shibam Saha</a
+        >
+      </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <!-- Modal Starts -->
+    <div id="modal-bg" class="fixed z-10 inset-0 overflow-y-auto hidden">
+      <div class="flex items-center justify-center min-h-screen bg-black/50">
+        <div
+          class="modal-container bg-white w-[90%] max-w-5xl aspect-video mx-auto rounded-lg shadow-lg p-4"
+        >
+          <!-- Video Player with Autoplay -->
+          <div class="relative overflow-hidden rounded-lg">
+            <iframe
+              class="w-full aspect-video"
+              src="https://www.youtube.com/embed/8zRXDsGydeQ"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Ends -->
+
+    <script type="module" src="/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
+  </body>
+  <!-- Body Ends -->
 </html>
