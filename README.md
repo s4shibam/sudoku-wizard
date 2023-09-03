@@ -1,4 +1,4 @@
-## Sudoku Solver
+## Sudoku Wizard
 
 **What is Sudoku game?**
 
@@ -16,7 +16,7 @@ If in case someone wants to know that how to use this website, then `How to Play
 
 **Live Link**
 
-- [Sudoku Solver](https://sudoku-wizard.shibamsaha.dev)
+- [Sudoku Wizard](https://sudoku-wizard.shibamsaha.dev)
 
 <br/>
 
@@ -33,8 +33,10 @@ If in case someone wants to know that how to use this website, then `How to Play
 
 **Overview Or Tutorial Video**
 
-<video src="public/sudoku-wizard-tutorial.mp4" controls title="Sudoku Wizard Tutorial" poster="public/poster.png" width="720px"></video>
+<video src="./public/sudoku-wizard-tutorial.mp4" controls title="Sudoku Wizard Tutorial" poster="./public/poster.png" width="720px"></video>
+<br/>
 
+Note: If video not showing, click <a href="./public/sudoku-wizard-tutorial.mp4">here</a>.
 
 **Follow Me**
 
