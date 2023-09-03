@@ -9,10 +9,11 @@ import { isValidSudoku } from './valid-sudoku.js';
 // Declare variables
 let numberSelected = null,
   body = null,
+  modalBG = null,
   openModal = null,
   isRunning = false,
-  modalBG = null,
   logoButton = null,
+  modalVideo = null,
   startButton = null,
   resetButton = null,
   numberPlate = null,
@@ -325,6 +326,7 @@ window.addEventListener('load', () => {
   openModal = document.querySelector('#open-modal');
   sudokuStatus = document.querySelector('#sudoku-status');
   slowVisualization = document.querySelector('#slow-visualization');
+  const modalVideo = document.querySelector('#modal-video');
 
   if (logoButton) {
     logoButton.addEventListener('click', reloadSite);
@@ -356,6 +358,8 @@ window.addEventListener('load', () => {
 
   if (modalBG) {
     modalBG.addEventListener('click', function () {
+      modalVideo.pause();
+      modalVideo.currentTime = 0;
       modalBG.classList.add('hidden');
     });
   }
@@ -363,6 +367,12 @@ window.addEventListener('load', () => {
   if (body) {
     body.classList.remove('hidden');
     body.classList.add('grid');
+  }
+
+  if (modalVideo) {
+    modalVideo.addEventListener('click', function (event) {
+      event.stopPropagation();
+    });
   }
 });
 

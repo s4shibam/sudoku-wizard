@@ -248,12 +248,15 @@
         >
           <!-- Video Player with Autoplay -->
           <div class="relative overflow-hidden rounded-lg">
-            <iframe
+            <video
+              id="modal-video"
               class="w-full aspect-video"
-              src="https://www.youtube.com/embed/8zRXDsGydeQ"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
+              controls
+              poster="./poster.png"
+            >
+              <source src="./sudoku-wizard-tutorial.mp4" type="video/mp4" />
+              Your browser does not support the video format.
+            </video>
           </div>
         </div>
       </div>
