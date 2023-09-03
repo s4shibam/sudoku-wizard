@@ -8,13 +8,15 @@
 
 **Details**
 
-Sudoku Solver is an algorithmic project based on `Backtracking Algorithm`. This projects shows a visual representation of the working of backtracking algorithm which is used to solve a Sudoku Puzzle.
+Sudoku Wizard is an algorithmic project based on `Backtracking Algorithm`. This project illustrates the operation of the backtracking algorithm, which is used to solve any Sudoku puzzle. In this project, there is also a possibility to slowly visualize the backtracking process to better comprehend the algorithm.
+
+If in case someone wants to know that how to use this website, then `How to Play?` tutorial video is also provided in the site.
 
 <br/>
 
 **Live Link**
 
-- [Sudoku Solver](https://s4shibam-sudoku-solver.netlify.app)
+- [Sudoku Solver](https://sudoku-wizard.shibamsaha.dev)
 
 <br/>
 
@@ -29,25 +31,10 @@ Sudoku Solver is an algorithmic project based on `Backtracking Algorithm`. This 
 
 <br/>
 
-**Reference Images / Screenshots**
+**Overview Or Tutorial Video**
 
-- Landing Page
+<video src="public/sudoku-wizard-tutorial.mp4" controls title="Sudoku Wizard Tutorial" poster="public/poster.png" width="720px"></video>
 
-<img src="./media/Landing.png" alt="Landing Page" style="width: 75%; height: auto"/>
-
-- Preset Sudoku Puzzle
-
-<img src="./media/Preset.png" alt="Preset Sudoku Puzzle" style="width: 75%; height: auto"/>
-
-- Sudoku Puzzle During Solving
-
-<img src="./media/Video.gif" alt="Sudoku Puzzle During Solving" style="width: 75%; height: auto"/>
-
-- Mobile View
-
-<img src="./media/Mobile.png" alt="Mobile View" style="width: auto; height: 800px"/>
-
-<br/>
 
 **Follow Me**
 
